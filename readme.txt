@@ -2,7 +2,7 @@
 
 Contributors: webarthur
 Theme link: https://github.com/webarthur/w3css
-Tags: w3css, lightweight, fast, one-column, two-columns, custom-menu, featured-images, microformats, sticky-post, threaded-comments, translation-ready
+Tags: one-column, two-columns, custom-menu, featured-images, microformats, sticky-post, threaded-comments, translation-ready
 Text Domain: w3css
 Requires at least: 4.7
 Tested up to: 5.1
