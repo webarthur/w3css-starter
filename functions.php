@@ -21,7 +21,7 @@ function w3css_customize_register ($wp_customize) {
 		array(
 			'type'    => 'checkbox',
 			'section' => 'title_tagline',
-			'label'   => esc_html__( 'Display Site Title & Tagline', 'w3css' ),
+			'label'   => esc_html__( 'Display Site Title & Tagline', 'w3css-starter' ),
 		)
 	);
 
@@ -69,7 +69,7 @@ add_filter( 'intermediate_image_sizes_advanced', 'w3css_image_insert_override' )
 
 function w3css_widgets_init() {
 	register_sidebar( array(
-		'name' => esc_html__( 'Sidebar Widget Area', 'w3css' ),
+		'name' => esc_html__( 'Sidebar Widget Area', 'w3css-starter' ),
 		'id' => 'primary-widget-area',
 		'before_widget' => '<div id="%1$s" class="widget-container w3-padding-large w3-padding-16 w3-white w3-margin-bottom w3-card %2$s">',
 		'after_widget' => '</div>',
@@ -78,7 +78,7 @@ function w3css_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name' => esc_html__( 'Footer Widget Area', 'w3css' ),
+		'name' => esc_html__( 'Footer Widget Area', 'w3css-starter' ),
 		'id' => 'footer-widget-area',
 		'before_widget' => '<div id="%1$s" class="w3-col w3-padding widget-container %2$s">',
 		'after_widget' => '</div>',

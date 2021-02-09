@@ -1,6 +1,6 @@
 <?php
 function w3css_setup() {
-	load_theme_textdomain( 'w3css', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'w3css-starter', get_template_directory() . '/languages' );
 	add_theme_support( 'title-tag' );
 
 	// Add default posts and comments RSS feed links to head.
@@ -39,32 +39,31 @@ function w3css_setup() {
 		)
 	);
 
-	// T21
 	// Add post-formats support
-	add_theme_support(
-		'post-formats',
-		array(
-			'link',
-			'aside',
-			'gallery',
-			'image',
-			'quote',
-			'status',
-			'video',
-			'audio',
-			'chat',
-		)
-	);
+	// add_theme_support(
+	// 	'post-formats',
+	// 	array(
+	// 		'link',
+	// 		'aside',
+	// 		'gallery',
+	// 		'image',
+	// 		'quote',
+	// 		'status',
+	// 		'video',
+	// 		'audio',
+	// 		'chat',
+	// 	)
+	// );
 
 	global $content_width;
 	if ( ! isset( $content_width ) ) { $content_width = 1920; }
 
-	// T21
+	// Add menus
 	register_nav_menus(
 		array(
-			// 'main-menu' => esc_html__( 'Main Menu', 'w3css' ),
-			'primary' => esc_html__( 'Primary Menu', 'w3css' ),
-			'footer'  => __( 'Secondary Menu', 'w3css' ),
+			// 'main-menu' => esc_html__( 'Main Menu', 'w3css-starter' ),
+			'primary' => esc_html__( 'Primary Menu', 'w3css-starter' ),
+			'footer'  => __( 'Secondary Menu', 'w3css-starter' ),
 		)
 	);
 
@@ -117,8 +116,8 @@ function w3css_setup() {
 	// 	'editor-font-sizes',
 	// 	array(
 	// 		array(
-	// 			'name'      => esc_html__( 'Extra small', 'w3css' ),
-	// 			'shortName' => esc_html_x( 'XS', 'Font size', 'w3css' ),
+	// 			'name'      => esc_html__( 'Extra small', 'w3css-starter' ),
+	// 			'shortName' => esc_html_x( 'XS', 'Font size', 'w3css-starter' ),
 	// 			'size'      => 16,
 	// 			'slug'      => 'extra-small',
 	// 		)
@@ -140,7 +139,7 @@ function w3css_setup() {
 	// 	'editor-color-palette',
 	// 	array(
 	// 		array(
-	// 			'name'  => esc_html__( 'Blue', 'w3css' ),
+	// 			'name'  => esc_html__( 'Blue', 'w3css-starter' ),
 	// 			'slug'  => 'blue',
 	// 			'color' => $blue,
 	// 		)
@@ -152,7 +151,7 @@ function w3css_setup() {
 	// 	'editor-gradient-presets',
 	// 	array(
 	// 		array(
-	// 			'name'     => esc_html__( 'Purple to yellow', 'w3css' ),
+	// 			'name'     => esc_html__( 'Purple to yellow', 'w3css-starter' ),
 	// 			'gradient' => 'linear-gradient(160deg, ' . $green . ' 0%, ' . $blue . ' 100%)',
 	// 			'slug'     => 'purple-to-yellow',
 	// 		)

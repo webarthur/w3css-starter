@@ -6,11 +6,11 @@
 		<main id="content" role="main">
 			<article id="post-0" class="post not-found">
 				<header class="header w3-container">
-					<h1 class="entry-title"><?php esc_html_e( 'Not Found', 'w3css' ); ?></h1>
+					<h1 class="entry-title"><?php esc_html_e( 'Not Found', 'w3css-starter' ); ?></h1>
 				</header>
 				<div class="w3-container w3-white w3-margin w3-padding-large w3-card">
 					<div class="entry-content">
-						<p><?php esc_html_e( 'Nothing found for the requested page. Try a search instead?', 'w3css' ); ?></p>
+						<p><?php esc_html_e( 'Nothing found for the requested page. Try a search instead?', 'w3css-starter' ); ?></p>
 						<?php get_search_form(); ?>
 					</div>
 				</div>

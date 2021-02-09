@@ -16,9 +16,9 @@
 						<?php
 						printf(
 							/* translators: %s: WordPress. */
-							esc_html__( 'Powered by %s with %s.', 'w3css' ),
-							'<a href="' . esc_url( __( 'https://github.com/webarthur/', 'w3css' ) ) . '">webarthur</a>',
-							'<a href="' . esc_url( __( 'https://www.w3schools.com/w3css/', 'w3css' ) ) . '">W3.CSS</a>'
+							esc_html__( 'Powered by %s with %s.', 'w3css-starter' ),
+							'<a href="' . esc_url( __( 'https://github.com/webarthur/', 'w3css-starter' ) ) . '">webarthur</a>',
+							'<a href="' . esc_url( __( 'https://www.w3schools.com/w3css/', 'w3css-starter' ) ) . '">W3.CSS</a>'
 						);
 						?>
 					</div><!-- .powered-by -->

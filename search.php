@@ -5,7 +5,7 @@
 		<main id="content" role="main">
 			<?php if ( have_posts() ) : ?>
 				<header class="header w3-container">
-					<h1 class="entry-title"><?php printf( esc_html__( 'Search Results for: %s', 'w3css' ), get_search_query() ); ?></h1>
+					<h1 class="entry-title"><?php printf( esc_html__( 'Search Results for: %s', 'w3css-starter' ), get_search_query() ); ?></h1>
 				</header>
 				<?php while ( have_posts() ) : the_post(); ?>
 					<div class="w3-container w3-white w3-margin w3-padding-large w3-card">
@@ -16,11 +16,11 @@
 			<?php else : ?>
 				<article id="post-0" class="post no-results not-found">
 					<header class="header w3-container">
-						<h1 class="entry-title"><?php esc_html_e( 'Nothing Found', 'w3css' ); ?></h1>
+						<h1 class="entry-title"><?php esc_html_e( 'Nothing Found', 'w3css-starter' ); ?></h1>
 					</header>
 					<div class="w3-container w3-white w3-margin w3-padding-large w3-card">
 						<div class="entry-content">
-							<p><?php esc_html_e( 'Sorry, nothing matched your search. Please try again.', 'w3css' ); ?></p>
+							<p><?php esc_html_e( 'Sorry, nothing matched your search. Please try again.', 'w3css-starter' ); ?></p>
 							<?php get_search_form(); ?>
 						</div>
 					</div>

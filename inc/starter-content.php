@@ -9,7 +9,7 @@ function w3css_get_starter_content() {
 		'posts'     => array(
 			'front' => array(
 				'post_type'    => 'page',
-				'post_title'   => esc_html_x( 'Just an example page!', 'Theme starter content', 'w3css' ),
+				'post_title'   => esc_html_x( 'Just an example page!', 'Theme starter content', 'w3css-starter' ),
 				'post_content' => '
 					<!-- wp:paragraph -->
 					<p>Lorem ipsum <i>dolor sit amet</i>, consectetur adipiscing elit. Fusce eu tortor elit. Vestibulum ut felis ac justo tempor elementum at id magna. Aenean sed ex vel dolor dapibus rutrum ac condimentum erat. Nunc interdum ac quam nec mattis. Sed molestie ante sed augue ultricies placerat quis et magna. Curabitur et accumsan eros. In finibus in tellus at maximus.</p>
@@ -47,7 +47,7 @@ function w3css_get_starter_content() {
 		'nav_menus' => array(
 			// Assign a menu to the "primary" location.
 			'primary' => array(
-				'name'  => esc_html__( 'Primary Menu', 'w3css' ),
+				'name'  => esc_html__( 'Primary Menu', 'w3css-starter' ),
 				'items' => array(
 					'link_home', // Note that the core "home" page is actually a link in case a static front page is not used.
 					'page_about',
