@@ -1,5 +1,5 @@
 # W3CSS WordPress Theme
-WordPress HTML5 boilerplate starter theme created with W3.CSS
+WordPress HTML5 boilerplate starter theme created with [W3.CSS](https://github.com/JaniRefsnes/w3css).
 
 ## W3.CSS
 [W3.CSS](https://github.com/JaniRefsnes/w3css) is a CSS microframework with support for desktop, tablet, and mobile design by default.
