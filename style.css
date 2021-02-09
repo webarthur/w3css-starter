@@ -1,0 +1,308 @@
+/*
+Theme Name: W3CSS
+Theme URI: https://github.com/webarthur/w3css
+Author: webarthur
+Author URI: https://profiles.wordpress.org/webarthur/
+Description: This is a WordPress HTML5 boilerplate starter theme created with W3.CSS, it is a CSS microframework with support for desktop, tablet, and mobile design by default. Use this as a base to build websites for clients or to build completely custom themes from scratch. For support and suggestions, go to: https://github.com/webarthur/w3css/issues. Thank you!
+Requires at least: 4.7
+Tested up to: 5.6.1
+Requires PHP: 5.6
+Version: 1.0
+License: GNU General Public License
+License URI: https://www.gnu.org/licenses/gpl.html
+Tags: w3css, lightweight, fast, one-column, two-columns, custom-menu, featured-images, microformats, sticky-post, threaded-comments, translation-ready
+Text Domain: w3css
+
+W3CSS is distributed under the terms of the GNU GPL
+*/
+
+/* =Theme
+-------------------------------------------------------------- */
+* {
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent
+}
+
+body {
+	line-height: 1.5;
+}
+
+textarea,
+input[type="text"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="search"],
+input[type="password"] {}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+th,
+td {
+	padding: 2px;
+}
+
+a {
+	color: #007acc;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.powered-by a {
+	color: inherit;
+}
+
+#comments-list ul,
+.widget-area ul {
+	padding: 0;
+	list-style: none;
+}
+#sidebar {
+  /* margin-top: -12px!important; */
+}
+#sidebar .widget-container h3 {
+  margin-top: 0;
+}
+#sidebar .w3-margin-bottom {
+	margin-bottom: 32px!important;
+}
+
+#footer .widget-area {
+	display: flex;
+}
+@media (max-width: 992px) {
+	#footer .widget-area {
+		display: block;
+	}
+}
+
+
+.comment-form-author label,
+.comment-form-email label,
+.comment-form-url label,
+.comment-form-comment label {
+  display: none;
+}
+
+#menu .w3-bar .w3-bar-item {
+  padding: 0!important;
+}
+#menu .w3-bar .menu-item-has-children a {
+  text-align: left;
+  display: block;
+}
+#menu .w3-bar .w3-dropdown-content .w3-dropdown-content {
+  display: none;
+  transform: translateX(100%);
+}
+#menu .w3-bar .w3-dropdown-content .menu-item-has-children:hover > .w3-dropdown-content {
+  /* position: absolute; */
+  top: 0;
+  display: block!important;
+}
+
+@media (max-width: 600px) {
+  #mobilemenu .menu .w3-dropdown-content {
+    display: block!important;
+    position: static!important;
+    box-shadow: none;
+  }
+}
+
+
+/* =w3css ajustments
+-------------------------------------------------------------- */
+
+.w3-content {
+  max-width: 1200px;
+}
+
+.w3-flex {
+  display: flex;
+}
+.w3-shrink-0 {
+  flex-shrink: 0;
+}
+.w3-card, .w3-card-2 {
+  box-shadow: 0 2px 3px 0 rgb(0 0 0 / 8%), 0 2px 6px 0 rgb(0 0 0 / 6%);
+}
+.w3-margin-0 {
+	margin: 0;
+}
+
+.w3-dropdown-hover:first-child {
+	background: inherit;
+}
+
+a.w3-button:hover {
+	text-decoration: none;
+}
+
+/* =WordPress Core
+-------------------------------------------------------------- */
+.alignnone {
+  margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+  display: block;
+  margin: 5px auto 5px auto;
+}
+
+.alignright {
+  float:right;
+  margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0;
+}
+
+a img.alignright {
+  float: right;
+  margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+  margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wp-caption {
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  max-width: 96%; /* Image does not overflow the content area */
+  padding: 5px 3px 10px;
+  text-align: center;
+}
+
+.wp-caption.alignnone {
+  margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+  margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+  margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+  border: 0 none;
+  height: auto;
+  margin: 0;
+  max-width: 98.5%;
+  padding: 0;
+  width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+  font-size: 11px;
+  line-height: 17px;
+  margin: 0;
+  padding: 0 4px 5px;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+  background-color: #eee;
+  clip: auto !important;
+  clip-path: none;
+  color: #444;
+  display: block;
+  font-size: 1em;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar. */
+}
+
+
+/* =WordPress ajustments
+-------------------------------------------------------------- */
+pre {
+  overflow: auto;
+}
+
+.menu {
+	margin: 0;
+	padding-left: 0;
+}
+
+.entry-title {
+  word-break: break-word;
+}
+.entry-content img {
+  max-width: 100%;
+  height: auto;
+}
+.entry-footer {
+  margin: 12px 0;
+}
+.entry-links {
+  clear: both;
+}
+
+#comments .comment-content,
+#comments .children,
+#comments .reply {
+  margin-left: 3.25em;
+}
+#comments .comment-body {
+  margin-bottom: 1.4em;
+}
+#comments .comment-metadata {
+  font-size: 90%;
+}
+
+a.wp-block-button__link {
+  color: white;
+}
+.wp-block-button.is-style-squared .wp-block-button__link {
+  border-radius: 0;
+}
+.nav-previous {
+  float: left;
+}
+.nav-next {
+  float: right;
+}
+
+/* .focus-visible + .w3-dropdown-content {
+  display: block;
+} */
