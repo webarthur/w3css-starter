@@ -1,18 +1,18 @@
 		</div>
 
-		<footer id="footer" class="w3-white w3-margin-top w3-card" role="contentinfo">
+		<footer id="footer" class="<?php w3css_block_class('footer', 'w3-white w3-margin-top w3-card') ?>" style="clear:both" role="contentinfo">
 
 			<?php if ( is_active_sidebar( 'footer-widget-area' ) ) : ?>
-				<div class="w3-content w3-padding-16">
+				<div class="<?php w3css_block_class('footer_content', 'w3-content w3-padding-16') ?>">
 					<div class="w3-row widget-area">
 						<?php dynamic_sidebar( 'footer-widget-area' ); ?>
 					</div><!-- .widget-area -->
 				</div>
 			<?php endif; ?>
 
-			<div class="w3-dark-grey">
-				<div class="w3-content w3-padding-16 w3-center w3-small">
-					<div id="copyright" class="powered-by">
+			<?php if (w3css_option('copyright')): ?>
+				<div id="copyright" class="<?php w3css_block_class('copyright', 'w3-dark-grey powered-by') ?>">
+					<div class="<?php w3css_block_class('copyright_content', 'w3-content w3-padding-16 w3-center w3-small') ?>">
 						<?php
 						printf(
 							/* translators: %s: WordPress. */
@@ -21,9 +21,11 @@
 							'<a href="' . esc_url( __( 'https://www.w3schools.com/w3css/', 'w3css-starter' ) ) . '">W3.CSS</a>'
 						);
 						?>
-					</div><!-- .powered-by -->
-				</div>
-			</div>
+					</div>
+				</div><!-- .copyright -->
+			<?php endif; ?>
+
+			<?php do_action('w3css_block_footer'); ?>
 
 		</footer>
 

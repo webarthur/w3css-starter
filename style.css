@@ -87,6 +87,9 @@ a:hover {
 .comment-form-comment label {
   display: none;
 }
+#commentform textarea {
+  width: 100%
+}
 
 #menu .w3-bar .w3-bar-item {
   padding: 0!important;
@@ -105,6 +108,12 @@ a:hover {
   display: block!important;
 }
 
+#mobilemenu {
+  clear: both;
+  padding: 0;
+  width: 100%;
+  border-top: 2px solid #eee;
+}
 @media (max-width: 600px) {
   #mobilemenu .menu .w3-dropdown-content {
     display: block!important;
@@ -307,7 +316,3 @@ a.wp-block-button__link {
 .nav-next {
   float: right;
 }
-
-/* .focus-visible + .w3-dropdown-content {
-  display: block;
-} */

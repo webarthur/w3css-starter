@@ -13,7 +13,9 @@
 					</nav>
 				<?php endif; ?>
 				<ul class="wp-block-latest-comments has-avatars has-dates has-excerpts">
-					<?php wp_list_comments( 'type=comment' ); ?>
+					<?php // wp_list_comments( 'type=comment' ); ?>
+					<?php // wp_list_comments( array( 'callback' => 'custom_comment', 'avatar_size' => 50 ) ); ?>
+					<?php wp_list_comments( array( 'avatar_size' => 50 ) ); ?>
 				</ul>
 				<?php if ( get_comment_pages_count() > 1 ) : ?>
 					<nav id="comments-nav-below" class="comments-navigation" role="navigation">

@@ -1,5 +1,41 @@
 <?php
-include get_template_directory() . '/inc/theme-setup.php';
+
+global $w3css_theme_options;
+$w3css_theme_options = apply_filters('w3css_theme_options', [
+	'copyright' => true,
+	'comment_form_input_class'  => 'w3-input w3-border',
+	'comment_form_submit_class' => 'w3-button w3-black',
+	'primary_widget_class' => 'w3-padding-large w3-padding-16 w3-white w3-margin-bottom w3-card',
+	'footer_widget_class'  => 'w3-col w3-padding widget-container',
+	// 'container_class'  => 'w3-margin-top',
+	// 'header_class' => 'w3-white w3-card',
+	// 'primary_menu_class' => 'w3-right w3-hide-small',
+	// 'mobile_menu_button_class' => 'w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right',
+	// 'mobile_menu_class' => 'w3-hide w3-hide-large w3-hide-medium',
+	// 'branding_class' => 'w3-bar-item',
+	// 'footer_class' => 'w3-white w3-margin-top w3-card',
+	// 'footer_content_class' => 'w3-content w3-padding-16',
+	// 'copyright_class' => 'w3-dark-grey powered-by',
+	// 'copyright_content_class' => 'w3-content w3-padding-16 w3-center w3-small',
+]);
+
+include get_template_directory() . '/inc/theme_setup.php';
+include get_template_directory() . '/inc/comment_form.php';
+
+add_action( 'enqueue_block_assets', 'w3css_gutenberg_css' );
+function w3css_gutenberg_css() {
+  echo "<link rel='stylesheet' id='mediaelement-css'  href='" . get_template_directory_uri() . '' . "/css/w3.css' media='all' />";
+}
+
+function w3css_block_class ($name, $default = '') {
+	global $w3css_theme_options;
+	$class = isset($w3css_theme_options[$name . '_class']) ? $w3css_theme_options[$name . '_class'] : $default;
+	echo apply_filters('w3css_block_class_' . $name, $class);
+}
+function w3css_option ($name, $default = '') {
+	global $w3css_theme_options;
+	return isset($w3css_theme_options[$name]) ? $w3css_theme_options[$name] : $default;
+}
 
 function w3css_sanitize_checkbox ($checked = null) {
 	return (bool) isset( $checked ) && true === $checked;
@@ -68,10 +104,11 @@ function w3css_image_insert_override( $sizes ) {
 add_filter( 'intermediate_image_sizes_advanced', 'w3css_image_insert_override' );
 
 function w3css_widgets_init() {
+	global $w3css_theme_options;
 	register_sidebar( array(
 		'name' => esc_html__( 'Sidebar Widget Area', 'w3css-starter' ),
 		'id' => 'primary-widget-area',
-		'before_widget' => '<div id="%1$s" class="widget-container w3-padding-large w3-padding-16 w3-white w3-margin-bottom w3-card %2$s">',
+		'before_widget' => '<div id="%1$s" class="widget-container ' . $w3css_theme_options['primary_widget_class'] . '" %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
@@ -80,7 +117,7 @@ function w3css_widgets_init() {
 	register_sidebar( array(
 		'name' => esc_html__( 'Footer Widget Area', 'w3css-starter' ),
 		'id' => 'footer-widget-area',
-		'before_widget' => '<div id="%1$s" class="w3-col w3-padding widget-container %2$s">',
+		'before_widget' => '<div id="%1$s" class="' . $w3css_theme_options['footer_widget_class'] . '" %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h3 class="widget-title w3-medium"><b>',
 		'after_title' => '</b></h3>',

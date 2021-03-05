@@ -9,7 +9,7 @@
 					<?php get_template_part( 'entry' ); ?>
 				</div>
 				<!-- <div class="w3-container w3-white w3-margin w3-padding-large w3-card">
-					<?php comments_template(); ?>
+					<?php // comments_template(); ?>
 				</div> -->
 			<?php endwhile; endif; ?>
 			<?php get_template_part( 'nav', 'below' ); ?>
