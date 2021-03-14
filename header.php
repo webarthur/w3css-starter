@@ -28,9 +28,9 @@
 					<!-- Lext logo -->
 					<?php if ( get_theme_mod( 'display_title_and_tagline', true ) === true ) : ?>
 						<div id="site-title">
-							<h1 class="w3-xlarge w3-margin-0">
+							<<?php echo is_front_page() ? 'h1' : 'div' ?> class="w3-xlarge w3-margin-0">
 								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_html( get_bloginfo( 'name' ) ); ?>" rel="home"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></a>
-							</h1>
+							</<?php echo is_front_page() ? 'h1' : 'div' ?>>
 						</div>
 					<?php endif; ?>
 
